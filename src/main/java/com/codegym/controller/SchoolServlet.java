@@ -24,6 +24,8 @@ public class SchoolServlet extends HttpServlet {
                 case "createTeacher":
                     showCreateTeacherForm(request, response);
                     break;
+                case "createClass":
+                    showCreateClassForm(request,response);
             }
 //        } catch (SQLException ex) {
 //            throw new ServletException(ex);
@@ -39,9 +41,11 @@ public class SchoolServlet extends HttpServlet {
             case "createTeacher":
                 createTeacher(request, response);
                 break;
+            case "createClass":
+                createClass(request, response);
+                break;
         }
     }
-
     private void createTeacher(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String name = request.getParameter("name");
         String address = request.getParameter("address");
@@ -60,5 +64,13 @@ public class SchoolServlet extends HttpServlet {
         RequestDispatcher rD = request.getRequestDispatcher("create_teacher.jsp");
         rD.forward(request,response);
     }
-
+    private void createClass(HttpServletRequest request, HttpServletResponse response) {
+        String classCode = request.getParameter("class_code");
+        String className = request.getParameter("name");
+        String teacherId = request.getParameter("teacher_id");
+    }
+    private void showCreateClassForm(HttpServletRequest request, HttpServletResponse response)  throws ServletException, IOException{
+        RequestDispatcher rD = request.getRequestDispatcher("create_class.jsp");
+        rD.forward(request,response);
+    }
 }

@@ -15,10 +15,25 @@
 <form method="post">
     <h2>Create Teacher</h2>
     <br>
-    <div>Name:<input type="text" name="name" id = "name" size="80%" placeholder="Nguyen Van A"/></div>
-    <div>Address:<input type="text" name="address" id = "address" size="80%" placeholder="Ha Nam"/></div>
-    <div>Date Of Birth<input type="text" name="dob" id = "dob" size="80%" placeholder="yyyy-mm-dd"/></div>
-    <div>Phone:<input type="text" name="phone" id = "phone"  size="80%" placeholder="09xxxxxxx"/></div>
+    <table>
+        <tr>
+            <th>Name:</th>
+            <td><input type="text" name="name" id = "name" size="50px" placeholder="Nguyen Van A"/>
+            </td>
+        </tr>
+        <tr>
+            <th>Address:</th>
+            <td><input type="text" name="address" id = "address" size="50px" placeholder="Ha Nam"/></td>
+        </tr>
+        <tr>
+            <th>Date Of Birth:</th>
+            <td><input type="text" name="dob" id = "dob" size="50px" placeholder="yyyy-mm-dd"/></td>
+        </tr>
+        <tr>
+            <th>Phone:</th>
+            <td><input type="text" name="phone" id = "phone"  size="50px" placeholder="09xxxxxxx"/></td>
+        </tr>
+    </table>
     <br>
     <input type="submit" value="Create">
 </form>

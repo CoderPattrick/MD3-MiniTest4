@@ -79,6 +79,9 @@ public class UserDAOImpl implements UserDAO{
             System.out.println(pS);
             pS.execute();
             ResultSet rS = pS.getGeneratedKeys();
+            int id = rS.getInt(1);
+            clas.setClass_id(id);
+            System.out.println("Insert done!");
         }
         catch (SQLException e){
             System.err.println("Insert Failed!");
